@@ -12,7 +12,6 @@ public class NBody {
     public static Planet[] readPlanets(String file) {
         List<Planet> lst = new ArrayList<Planet>();
         In in = new In(file);
-
         in.readInt();
         in.readDouble();
         /* Planet[] thePlanets = new Planet[5];
@@ -63,12 +62,12 @@ public class NBody {
                 double fy = p.calcNetForceExertedByY(planets);
                 xForces[i] = fx;
                 yForces[i] = fy;
-                i += i;
+                i += 1;
             }
             int j = 0;
             for (Planet p : planets) {
                 p.update(dt, xForces[j], yForces[j]);
-                j += j;
+                j += 1;
             }
             StdDraw.picture(0, 0, "/images/starfield.jpg");
             for (Planet p : planets) {
