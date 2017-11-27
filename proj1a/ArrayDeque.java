@@ -54,14 +54,12 @@ public class ArrayDeque<T> {
     }
 
     public void printDeque(){
-        int p = 0;
-        while(p != size) {
-            System.out.println(item[p]);
-            p += 1;
+
+        while(nextFirst != nextLast+1) {
+            System.out.println(item[nextFirst]);
+            nextFirst += 1;
         }
     }
-
-
 
 
 }
